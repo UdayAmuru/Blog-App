@@ -1,0 +1,20 @@
+{% extends 'blog/base.html' %}
+{% block title %}Register{% endblock %}
+
+{% block content %}
+
+
+
+<h1>Edit Settings..</h1>
+
+<br/>
+{{ user.profile.bio }}
+<br/><br/>
+<div class="form-group">
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p}}
+    <button class="btn btn-warning">Update Profile</button>
+
+</div>
+{% endblock %}
